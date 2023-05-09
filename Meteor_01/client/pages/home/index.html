@@ -1,0 +1,32 @@
+<template name="pagesHome">
+    <h1>Naber</h1>
+
+    {{name}}
+    <br>
+    <br>
+
+    {{#if isValid}}
+        <span>Valid</span>
+    {{else}}
+        <span>Not Valid</span>
+    {{/if}}
+    
+    {{#unless isValid}}
+        <span>Not Valid</span>
+    {{/unless}}
+
+    <ul>
+        {{#each items}}
+            <li>{{@index}}. Item</li>
+        {{/each}}
+    </ul>
+
+    {{#let upperCase = (upperCase name)}}
+        <h4>{{upperCase}}</h4>
+    {{/let}}
+    
+    <button class="brd-btn-click">Click</button>
+    
+
+        
+</template>
