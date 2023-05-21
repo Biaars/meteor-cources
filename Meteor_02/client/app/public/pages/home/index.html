@@ -1,0 +1,37 @@
+<!--Konvensiyonel değişken adlandırma,
+    programlama alanında değişkenlere verilen isimlerin
+    belirli kurallara uygun olmasını ifade eder.
+    Bu, kodun okunabilirliğini artırmak, kod kalitesini iyileştirmek
+    takım içinde tutarlılık sağlamak için önemlidir.
+    Bu kullanım, "pages" dosyasındaki "Home" sayfası için geliştirildiği belirtilmiştir.
+    Bu yaklaşım, hem benzersiz bir template adıyla reaktif işlemleri gerçekleştirmemizi sağlar,
+    hem de SCSS için sınıf tanımlarıyla stil eklememizi kolaylaştırır. -->
+<template name="pagesHome">
+  <div class="pagesHome">
+    <h1>Naber</h1>
+
+    {{name}}
+    <br />
+    <br />
+
+    {{#if isValid}}
+    <span>Valid</span>
+    {{else}}
+    <span>Not Valid</span>
+    {{/if}} {{#unless isValid}}
+    <span>Not Valid</span>
+    {{/unless}}
+
+    <ul>
+      {{#each items}}
+      <li>{{@index}}. Item</li>
+      {{/each}}
+    </ul>
+
+    {{#let upperCase = (upperCase name)}}
+    <h4>{{upperCase}}</h4>
+    {{/let}}
+
+    <button class="brd-btn-click">Click</button>
+  </div>
+</template>

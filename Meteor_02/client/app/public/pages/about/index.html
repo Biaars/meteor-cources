@@ -1,0 +1,19 @@
+<template name="pagesAbout">
+    <div class="pagesAbout">
+        <ul>
+            {{./cars}}
+            <li>
+                {{#each cars}}
+                    <li>{{brand}}</li>
+                {{/each}}
+            </li>
+        </ul>
+        {{#if eq name 'rabia'}}
+            rabia eşit
+        {{else}}
+            rabia eşit değil
+        {{/if}}
+        {{currencyFormat 10 'TRY'}}
+        {{formatDateTime days}}
+    </div>
+</template>
