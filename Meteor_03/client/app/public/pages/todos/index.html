@@ -1,0 +1,30 @@
+<template name="pagesTodos">
+    {{#let _todos=(state.get 'todos')}}
+        <div class="pagesTodos">
+            <div class=" d-flex justify-content-between my-2">
+                <h1 class="mb-0">Todos</h1>
+                <button class="btn btn-danger brd-todo-create ">Create</button>
+            </div>
+            <div class="row justify-content-center my-3">
+                {{#each _todos}}
+                    <div class="col-lg-auto col-md-auto">
+                        <div class="card m-2" style="height:8rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{title}}</h5>
+                                <p class="card-text">{{description}}</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+                <div class="col-12">
+                    {{> componentPagination paginationState=pagination}}
+                  </div>
+            </div>
+        </div>
+    {{/let}}
+
+    {{> publicModalsTodoCreate}}
+</template>

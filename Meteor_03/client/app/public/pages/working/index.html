@@ -1,0 +1,19 @@
+<template name="pagesWorking">
+    <div class="pagesWorking container py-5">
+        <div class="bg-danger text-white text-center mb-3" style="width:130px; height: 100px;">
+            <p class="py-3 fs-1">{{count.get}}  | {{maps.get 'count'}}</p>
+        </div>
+       
+        <!--brd-add prefixi sayesinde fonksiyonlarda kullanabiliyoruz-->
+        <button class="btn btn-success brd-add ms-2 me-4"><i class="fa-solid fa-plus"></i></button>
+        <button class="btn btn-success brd-remove"><i class="fa-solid fa-minus"></i></button>
+    </div>
+    <div class="">
+      <button class="btn btn-success brd-insert"></button>
+      <ul>
+        {{#each todos}}
+          <li>{{title}}</li>
+        {{/each}}
+    </ul>
+    </div>
+</template>
